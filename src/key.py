@@ -10,11 +10,11 @@ left_keys = {
     'u': 'b',
 
     # Black keys
-    '2': 'c#',
-    '3': 'd#',
-    '5': 'f#',
-    '6': 'g#',
-    '7': 'a#'
+    '2': 'c-sharp',
+    '3': 'd-sharp',
+    '5': 'f-sharp',
+    '6': 'g-sharp',
+    '7': 'a-sharp'
 }
 
 # Keys that will be played with the right hand.
@@ -29,11 +29,11 @@ right_keys = {
     '/': 'b',
 
     # Black keys
-    'g': 'c#',
-    'h': 'd#',
-    'k': 'f#',
-    'l': 'g#',
-    ';': 'a#'
+    'g': 'c-sharp',
+    'h': 'd-sharp',
+    'k': 'f-sharp',
+    'l': 'g-sharp',
+    ';': 'a-sharp'
 }
 
 octaves = {
@@ -56,6 +56,7 @@ class KeyManager:
         self.left = left_keys
         self.right = right_keys
         self.octaves = octaves
+        self.valid_keys = list(self.left.keys()) + list(self.right.keys()) + list(self.octaves.keys())
 
         # Initial Octaves.
         self.left_octave = 4
@@ -66,15 +67,24 @@ class KeyManager:
         if(input == ' '):
             print("Shutting down piano")
             exit(0)
-        if(input in list(self.left.keys())):
-            return f"{self.left_octave}-{self.left[input]}"
-        if(input in list(self.right.keys())):
-            return f"{self.right_octave}-{self.right[input]}"
-        if(input in list(self.octaves.keys())):
-            if(self.octaves[input] < 5 and self.octaves[input] >= 1):
-                self.left_octave = self.octaves[input]
-                return self.left_octave + " octave."
-            if(self.octaves[input] >= 5 and self.octaves[input] <= 7):
-                self.right_octave = self.octaves[input]
-                return self.right_octave + " octave."
-        return
+        if(self.valid_key(input)):
+            if(input in list(self.octaves)):
+                new_octave = self.octaves[input]
+                if(new_octave >= 1 and new_octave <= 4):
+                    self.left_octave = new_octave
+                if(new_octave >= 5 and new_octave <= 7):
+                    self.right_octave = new_octave
+                return f"{new_octave} octave."
+            if(input in list(self.left.keys())):
+                return f"{self.left_octave}-{self.left[input]}"
+            if(input in list(self.right.keys())):
+                return f"{self.right_octave}-{self.right[input]}"
+        else:
+            return ""
+
+    
+    def valid_key(self, key):
+        if(key not in self.valid_keys):
+            return False
+        else:
+            return True

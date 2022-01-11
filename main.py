@@ -11,15 +11,14 @@ while(True):
     char = get_key()
     key = manager[char]
     
-    if(manager[char] is None):
-        print("Invalid Entry")
-    elif(manager[char] == ""):
-        print("Invalid Entry")
-    elif("octave" in manager[char]):
-        print("Invalid Entry")
+    if(key == ""):
+        print("Invalid Key")
+    elif("octave" in key):
+        print("Changed Octave")
     else:
         file_path = get_file_path(key)
-        playsound(file_path)
+        print(file_path)
+        playsound(file_path, block = False)
 
 
     # Provide a method for exiting program.
