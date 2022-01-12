@@ -78,6 +78,7 @@ class KeyManager {
                         if(newOctave >= 5 && newOctave <= 7) {
                                 this.rightOctave = newOctave
                         }
+                        return newOctave + " octave"
                 }
                 return ""
         }

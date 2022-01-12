@@ -4,42 +4,42 @@
                 <title>Piano</title>
                 <link rel="stylesheet" href="css/piano.css">
                 <script type="text/javascript" src="./js/button.js"></script>
-                <script type="text/javascript" src="./js/key.js"</script>
+                <script type="text/javascript" src="./js/key.js"></script>
                 <script type="text/javascript" src="./js/keyEvent.js"></script>
         </head>
         <body>
                 <h1>Piano</h1>
                 <hr>
-                <center><input onkeypress="keyPress(event)"></input></center>
-                <center style="margin-top: 2em" class="leftOct">Left Octave: 4</center>
+                <center id="leftOct" style="margin-top: 2em">Left Octave: 4</center> 
                 <ul class="set">
-                        <li class="white b" id="left-b"></li>
-                        <li class="black as" id="left-b-sharp"></li>
-                        <li class="white a" id="left-a"></li>
-                        <li class="black gs" id="left-a-sharp"></li>
-                        <li class="white g" id="left-g"></li>
-                        <li class="black fs" id="left-g-sharp"></li>
-                        <li class="white f" id="left-f"></li>
+                        <li class="white c" id="left-c"></li>
+                        <li class="black cs" id="left-c-sharp"></li>
+                        <li class="white d" id="left-d"></li>
+                        <li class="black ds" id="left-d-sharp"></li>
                         <li class="white e" id="left-e"></li>
-  	                <li class="black ds" id="left-e-sharp"></li>
-	                <li class="white d" id="left-d"></li>
-	                <li class="black cs" id="left-d-sharp"></li>
-	                <li class="white c" id="left-c"></li>
+                        <li class="white f" id="left-f"></li>
+                        <li class="black fs" id="left-f-sharp"></li>
+                        <li class="white g" id="left-g"></li>
+                        <li class="black gs" id="left-g-sharp"></li>
+                        <li class="white a" id="left-a"></li>
+                        <li class="black as" id="left-a-sharp"></li>
+                        <li class="white b" id="left-b"></li>
                 </ul>
-                <center class="rightOct">Right Octave: 5</center>
+                <center><input onkeypress="keyPress(event)"></input></center>
+                <center id="rightOct" style="margin-top: 2em">Right Octave: 5</center>
                 <ul class="set">
-                        <li class="white b" id="right-b"></li>
-                        <li class="black as" id="right-b-sharp"></li>
-                        <li class="white a" id="right-a"></li>
-                        <li class="black gs" id="right-a-sharp"></li>
-                        <li class="white g" id="right-g"></li>
-                        <li class="black fs" id="right-g-sharp"></li>
-                        <li class="white f" id="right-f"></li>
+                        <li class="white c" id="right-c"></li>
+                        <li class="black cs" id="right-c-sharp"></li>
+                        <li class="white d" id="right-d"></li>
+                        <li class="black ds" id="right-d-sharp"></li>
                         <li class="white e" id="right-e"></li>
-  	                <li class="black ds" id="right-e-sharp"></li>
-	                <li class="white d" id="right-d"></li>
-	                <li class="black cs" id="right-d-sharp"></li>
-	                <li class="white c" id="right-c"></li>
+                        <li class="white f" id="right-f"></li>
+                        <li class="black fs" id="right-f-sharp"></li>
+                        <li class="white g" id="right-g"></li>
+                        <li class="black gs" id="right-g-sharp"></li>
+                        <li class="white a" id="right-a"></li>
+                        <li class="black as" id="right-a-sharp"></li>
+                        <li class="white b" id="right-b"></li>
                 </ul>
         </body>
 </html>

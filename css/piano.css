@@ -6,10 +6,10 @@
 
 ul {
   box-sizing:border-box;
-  height:19.1em;
-  width:34em;
-  margin:5em auto;
-  padding:3em 0 0 3em;
+  height:18.1em;
+  width:32.5em;
+  margin:4em auto;
+  padding:2em 0 0 3em;
   position:relative;
   border:1px solid #160801;
   border-radius:1em;
@@ -62,8 +62,16 @@ ul .white:active {
   background:linear-gradient(to right,#444 0%,#222 100%)
 }
 
-.a,.g,.f,.d,.c {
+.a,.b,.c,.d,.e,.g {
   margin:0 0 0 -1em
+}
+
+.e {
+  width:5em
+}
+
+.f {
+  margin:0 0 0 0em
 }
 
 ul li:first-child {
