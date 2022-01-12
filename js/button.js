@@ -14,5 +14,5 @@ function clickAnimation(id) {
                 "border-radius" : "0 0 5px 5px",
                 "box-shadow" : "-1px 0 0 rgba(255,255,255,0.8) inset,0 0 5px #ccc inset,0 0 3px rgba(0,0,0,0.2)",
                 "background" : "linear-gradient(to bottom,#eee 0%,#fff 100%)",}
-        ], { duration: 5})
+        ], { duration: 500})
 }
