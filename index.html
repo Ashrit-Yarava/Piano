@@ -3,43 +3,54 @@
         <head>
                 <title>Piano</title>
                 <link rel="stylesheet" href="css/piano.css">
+                <link rel="stylesheet" href="css/inputbox.css">
+                <link rel="stylesheet" href="css/helper.css">
                 <script type="text/javascript" src="./js/button.js"></script>
                 <script type="text/javascript" src="./js/key.js"></script>
                 <script type="text/javascript" src="./js/keyEvent.js"></script>
         </head>
         <body>
-                <h1>Piano</h1>
-                <hr>
-                <center id="leftOct" style="margin-top: 2em">Left Octave: 4</center> 
+                <center id="leftOct" class="octaves" style="margin-top: 2em">Left Octave: 4</center> 
                 <ul class="set">
-                        <li class="white c" id="left-c"></li>
-                        <li class="black cs" id="left-c-sharp"></li>
-                        <li class="white d" id="left-d"></li>
-                        <li class="black ds" id="left-d-sharp"></li>
-                        <li class="white e" id="left-e"></li>
-                        <li class="white f" id="left-f"></li>
-                        <li class="black fs" id="left-f-sharp"></li>
-                        <li class="white g" id="left-g"></li>
-                        <li class="black gs" id="left-g-sharp"></li>
-                        <li class="white a" id="left-a"></li>
-                        <li class="black as" id="left-a-sharp"></li>
-                        <li class="white b" id="left-b"></li>
+                        <li class="white c" id="left-c"><p class="w">Q</p></li>
+                        <li class="black cs" id="left-c-sharp"><p class="bl">2</p></li>
+                        <li class="white d" id="left-d"><p class="w">W</p></li>
+                        <li class="black ds" id="left-d-sharp"><p class="bl">3</p></li>
+                        <li class="white e" id="left-e"><p class="w">E</p></li>
+                        <li class="white f" id="left-f"><p class="w">R</p></li>
+                        <li class="black fs" id="left-f-sharp"><p class="bl">5</p></li>
+                        <li class="white g" id="left-g"><p class="w">T</p></li>
+                        <li class="black gs" id="left-g-sharp"><p class="bl">6</p></li>
+                        <li class="white a" id="left-a"><p class="w">Y</p></li>
+                        <li class="black as" id="left-a-sharp"><p class="bl">7</p></li>
+                        <li class="white b" id="left-b"><p class="w">U</p></li>
                 </ul>
-                <center><input onkeypress="keyPress(event)"></input></center>
-                <center id="rightOct" style="margin-top: 2em">Right Octave: 5</center>
+                <center>
+                        <input autocomplete="off"
+                                autofocus="on"
+                                autocapitalize="off"
+                                aria-autocomplete="off"
+                                spellcheck="false"
+                                type="text" 
+                                onkeypress="keyPress(event)">
+                </center>
+                <center id="rightOct" class="octaves" style="margin-top: 2em">Right Octave: 5</center>
                 <ul class="set">
-                        <li class="white c" id="right-c"></li>
-                        <li class="black cs" id="right-c-sharp"></li>
-                        <li class="white d" id="right-d"></li>
-                        <li class="black ds" id="right-d-sharp"></li>
-                        <li class="white e" id="right-e"></li>
-                        <li class="white f" id="right-f"></li>
-                        <li class="black fs" id="right-f-sharp"></li>
-                        <li class="white g" id="right-g"></li>
-                        <li class="black gs" id="right-g-sharp"></li>
-                        <li class="white a" id="right-a"></li>
-                        <li class="black as" id="right-a-sharp"></li>
-                        <li class="white b" id="right-b"></li>
+                        <li class="white c" id="right-c"><p class="w">V</p></li>
+                        <li class="black cs" id="right-c-sharp"><p class="bl">G</p></li>
+                        <li class="white d" id="right-d"><p class="w">B</p></li>
+                        <li class="black ds" id="right-d-sharp"><p class="bl">H</p></li>
+                        <li class="white e" id="right-e"><p class="w">N</p></li>
+                        <li class="white f" id="right-f"><p class="w">M</p></li>
+                        <li class="black fs" id="right-f-sharp"><p class="bl">K</p></li>
+                        <li class="white g" id="right-g"><p class="w">,</p></li>
+                        <li class="black gs" id="right-g-sharp"><p class="bl">L</p></li>
+                        <li class="white a" id="right-a"><p class="w">.</p></li>
+                        <li class="black as" id="right-a-sharp"><p class="bl">;</p></li>
+                        <li class="white b" id="right-b"><p class="w">/</p></li>
                 </ul>
+                <center>
+                        <input type="image" onclick="window.open('https://github.com/Ashrit-Yarava/piano', '_blank')" src="assets/github.png" style="width:1%; margin-top:80px">
+                </center>
         </body>
 </html>

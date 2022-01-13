@@ -1,0 +1,13 @@
+input {
+  color: #fff;
+  padding: 1em 5em;
+  border:1px;
+  outline:none;
+  transition: all 0.1s ease-out;
+  position: relative;
+  color:transparent;
+  margin-top:-50px;
+  box-shadow: 0 2px 3px #ccc;
+  border-bottom: 0.25em solid #000000;
+  top:-2px;
+}
